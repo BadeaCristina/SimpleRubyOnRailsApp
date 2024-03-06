@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   post "sign_up", to: "registration#create"
   delete "logout", to:  "sessions#destroy"
 
+  get "sign_in", to:"sessions#new"
+  post "sign_in", to: "sessions#create"
+
   # GET /
   root to:"main#index"
 end
