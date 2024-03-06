@@ -1,8 +1,9 @@
 class MainController < ApplicationController
 
     def index
-       flash.now[:notice] = "Welcome to the main page!"
-       flash.now[:alert] = "Invalid login!"
+        if session[:user_id]
+            @user = User.find_by(session[:user_id]) 
+        end
     end
 
 
