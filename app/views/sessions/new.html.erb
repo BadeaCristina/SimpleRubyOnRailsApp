@@ -28,11 +28,12 @@
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <%= form.submit "Sign In", class:"btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" %>
+                     <%= link_to 'Forgot your password', password_reset_path,class: "btn btn-outline-danger mb-3" %>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Don't have an account?</p>
-                    <%= link_to 'Create New', sign_up_path,class: "btn btn-outline-danger" %>
+                    <%= link_to 'Create New', sign_up_path,class: "btn btn-outline-danger " %>
                   </div>
 
                 <%end%>
