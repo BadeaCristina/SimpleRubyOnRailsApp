@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get "sign_in", to:"sessions#new"
   post "sign_in", to: "sessions#create"
 
+  get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
+
   # GET /
   root to:"main#index"
 end
